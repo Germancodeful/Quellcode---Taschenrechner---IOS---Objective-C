@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *anzeige;
+@property (assign, nonatomic) BOOL benutzerTipptGerade;
+@property (assign, nonatomic) NSInteger wartendeZahl;
+@property (strong, nonatomic) NSString *wartendeOperation;
+
+- (IBAction)zahlGedrueckt:(id)sender;
+
+- (IBAction)operationGedrueckt:(id)sender;
+
+-(NSString*) berechne: (NSString*) operation mitDerZahl: (NSInteger) zahl;
 
 @end
